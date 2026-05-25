@@ -1,0 +1,91 @@
+debug-mode: false
+autosave-interval-seconds: 10
+
+transitions:
+  to-lobby-seconds: 5
+  lobby-wait-seconds: 10
+  lobby-title-last-seconds: 5
+
+pause:
+  auto-pause-delay-seconds: 5
+
+join-control:
+  enabled: true
+
+seed:
+  randomize: true
+  fixed-seed: 0
+  show-world-seed: false
+
+lobby:
+  world-name: challenge_lobby
+  spawn:
+    x: 0.5
+    y: 80.0
+    z: 0.5
+    yaw: 0.0
+    pitch: 0.0
+
+run:
+  world-name: challenge_run
+  spawn:
+    x: 0.5
+    z: 0.5
+    yaw: 0.0
+    pitch: 0.0
+
+border:
+  start-size: 128
+  growth-per-advancement: 128
+  max-size: 60000000
+  animation-seconds: 3
+  center:
+    x: 0.5
+    z: 0.5
+  apply-to:
+    overworld: true
+    nether: true
+    end: true
+  nether-scale-mode: same-size
+
+advancements:
+  include-hidden: false
+  include-technical: false
+  include-recipes: false
+  allowed-namespaces: []
+  blocked-namespaces: []
+
+scoreboard:
+  enabled: true
+
+feedback:
+  sound:
+    enabled: true
+    type: ENTITY_PLAYER_LEVELUP
+  actionbar:
+    enabled: true
+  chat:
+    enabled: true
+
+messages:
+  prefix: "&6[Worldborder]&r "
+  run-started: "&aNeuer Run gestartet! Versuch #%attempt% | Border: %border%"
+  run-started-with-seed: "&aNeuer Run gestartet! Versuch #%attempt% | Seed: %seed% | Border: %border%"
+  run-lost: "&c%player% ist gestorben. Run verloren!"
+  resetting: "&eReset laeuft... neue Welt wird erstellt."
+  run-stopped: "&cChallenge gestoppt."
+  challenge-paused: "&eChallenge wurde pausiert."
+  challenge-resumed: "&aChallenge wurde fortgesetzt."
+  pause-auto-triggered: "&eChallenge wurde automatisch pausiert, weil keine Spieler online sind."
+  pause-actionbar: "&eChallenge ist pausiert. &7Nutze /borderchallenge resume"
+  join-control-lobby-wait: "&eEin Run laeuft bereits. Du wartest in der Lobby bis zum naechsten Run."
+  join-control-forcejoin: "&a%count% Spieler wurden in den aktiven Run aufgenommen."
+  join-control-forcejoin-empty: "&eKeine wartenden Lobby-Spieler gefunden."
+  advancement-completed: "&a%player% hat %advancement% erreicht. Border: &f%border%"
+  title:
+    to-lobby:
+      main: "&cLobby in %seconds%s"
+      sub: "&7Bereite dich auf den Reset vor"
+    to-run:
+      main: "&aNeuer Run in %seconds%s"
+      sub: "&7Die Border wurde zurueckgesetzt"

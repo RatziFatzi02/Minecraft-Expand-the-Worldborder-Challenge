@@ -1,0 +1,14 @@
+state: IDLE
+global-elapsed-seconds: 0
+run-elapsed-seconds: 0
+attempt-counter: 0
+current-seed: 0
+current-border-size: 128
+scoreboard-enabled: true
+show-world-seed: false
+last-advancement-key: null
+completed-advancements: []
+first-completed-by: {}
+completed-at: {}
+completed-display-names: {}
+player-stats: {}

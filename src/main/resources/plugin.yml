@@ -1,0 +1,21 @@
+name: ExpandWorldborderChallenge
+main: de.ratzifatzi.expandworldborder.ExpandWorldborderChallengePlugin
+version: '${version}'
+api-version: '26.1.2'
+authors:
+  - RatziFatzi
+description: Multiplayer advancement-driven worldborder challenge.
+
+commands:
+  borderchallenge:
+    description: Main command for the Expand Worldborder Challenge
+    usage: /borderchallenge <start|pause|resume|reset|status|timer|advancements|missing|border|gui|forcejoin|debug>
+    aliases: [ewbc]
+
+permissions:
+  expandworldborder.admin:
+    description: Allows administrative challenge commands and OP GUI access.
+    default: op
+  expandworldborder.view:
+    description: Allows reading challenge status and opening the player GUI.
+    default: true

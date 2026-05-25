@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group = 'de.ratzifatzi'
+version = '0.1.0'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
+}
+
+dependencies {
+    compileOnly 'io.papermc.paper:paper-api:26.1.2.build.65-stable'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 25
+}
+
+processResources {
+    filteringCharset = 'UTF-8'
+    filesMatching('plugin.yml') {
+        expand(version: project.version)
+    }
+}
